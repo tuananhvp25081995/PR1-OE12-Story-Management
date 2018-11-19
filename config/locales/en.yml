@@ -1,2 +1,16 @@
 en:
-  hello: "Hello world"
+  layouts:
+    header:
+      web: "Web Truyen Online"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      about: "About"
+      contact: "Contact"
+  static_pages:
+    home:
+      search: "Search"
+    about:
+      web: "Web of:"
+      name: "Nguyen Tuan Anh and Pham Tung Lam"

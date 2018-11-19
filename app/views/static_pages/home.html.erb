@@ -1,0 +1,32 @@
+<nav class= "i18n">
+  <ul class= "nav navbar-nav">
+    <li><%= link_to t(".english"), locale: "en" %></li>
+    <li><%= link_to t(".vietnam"), locale: "vi" %></li>
+  </ul>
+</nav>
+
+<nav class = "group">
+  <ul class="nav navbar-nav navbar-right">
+    <li><%= link_to t(".truyencuoi"), "#" %></li>
+    <li><%= link_to t(".truyenteen"), "#" %></li>
+    <li><%= link_to t(".truyenngungon"), "#" %></li>
+    <li><%= link_to t(".truyenngan"), "#" %></li>
+    <li><%= link_to t(".truyenngontinh"), "#" %></li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <%= t ".search" %></button>
+  </form>
+</nav>
+
+<div class="center jumbotron">
+  <h1>Welcome to the Sample App</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+</div>
