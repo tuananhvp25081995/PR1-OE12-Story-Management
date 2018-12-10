@@ -1,0 +1,11 @@
+var like = $('#like-<%= params[:id] %>').find('i');
+var number = $('#like-<%= params[:id] %>').find('span');
+<% if @follow.nil? %>
+  like.addClass('fa-thumbs-up');
+  like.removeClass('fa-thumbs-down');
+  number.text(parseInt(number.text()) - 1);
+<% else %>
+  like.addClass('fa-thumbs-down');
+  like.removeClass('fa-thumbs-up');
+  number.text(parseInt(number.text()) + 1);
+<% end %>

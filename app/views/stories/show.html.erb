@@ -1,0 +1,20 @@
+<% provide :title, @story.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="member_info">
+      <h1>
+        <%= @story.name %>
+        <%= @story.image %>
+        <%= @story.describe %>
+        <%= @story.author_name %>
+      </h1>
+    </section>
+    <div>
+      <%= render @comments %>
+    </div>
+    <div>
+      <%= render partial: "comments/new", locals:{story: @story} %>
+    </div>
+  </div>
+  </aside>
+</div>

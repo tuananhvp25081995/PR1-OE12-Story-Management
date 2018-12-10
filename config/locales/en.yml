@@ -1,0 +1,101 @@
+en:
+  layouts:
+    header:
+      web: "Web Truyen Online"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+      sign_up: "Sign up"
+      log_out: "Log out"
+      settings: "Settings"
+      profile: "Profile"
+      members: "Members"
+      account: "Account"
+      post: "Post Story"
+      story: "Stories"
+    footer:
+      about: "About"
+      contact: "Contact"
+  static_pages:
+    home:
+      truyencuoi: "Truyện Cười"
+      truyenteen: "Truyện Teen"
+      truyenngungon: "Truyện Ngụ Ngôn"
+      truyenngan: "Truyện Ngắn"
+      truyenngontinh: "Truyện Ngôn Tình"
+      search: "Search..."
+      truyenlove: "Những truyện được yêu thích nhất"
+      truyennew: "Những bài viết mới"
+    help:
+      please: "Please access:"
+      help: "for help"
+      help1: "Help"
+    about:
+      about: "About"
+      web: "Website được thực hiện bởi 2 thành viên là : Nguyễn Tuấn Anh và Phạm Tùng Lâm"
+    contact:
+      web: "Web site được sưu tầm và được cập nhât liên tục trên mạng"
+      contact: "Mọi đóng góp xin được liên hệ:"
+      email: "Email:tuananh@gmail.com"
+      contact1: "Contact"
+  stories:
+    index:
+      all_stories: "All Stories"
+    new:
+      story: "Stories"
+      post_stories: "Post Stories"
+    show:
+      notfound: "Not found"
+    create:
+      post: "You have successfully posted the story"
+  members:
+    new:
+      create_account: "Create my account"
+      signup: "Sign up"
+    create:
+      welcome: "Welcome to the Web Story!"
+    edit:
+      edit: "Edit member"
+      update: "Update your profile"
+      save_changes: "Save changes"
+      change: "Change"
+    update:
+      profile_update: "Profile updated"
+    index:
+      all_members: "All members"
+      please_login: "Please log in."
+    list_truyen:
+      logo: "Storybook"
+  story:
+    new:
+      story: "Stories"
+    show:
+      notfound: "Not found"
+  sessions:
+    new:
+      log_in: "Log in"
+      sign_up: "Sign up"
+      new_member: "New member?"
+      sign_up: "Sign up now!"
+  comments:
+    form_edit:
+      edit_comment: "Compose edit comment..."
+      edit: "Edit"
+    new:
+      commnent: "Commnent"
+      compose_comment: "Compose comment..."
+    update:
+      success: "Edit success"
+      failed: "Edit failed"
+    comment:
+      you_sure: "You sure?"
+      delete: "delete"
+      edit: "edit"
+      comment: "Comment at"
+      ago: "ago."
+    create:
+      success: "Create success"
+      failed: "Create failed"
+    destroy:
+      success: "Comment deleted"
+      failed: "Delete failed"

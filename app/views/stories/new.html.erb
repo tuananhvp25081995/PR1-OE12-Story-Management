@@ -1,0 +1,20 @@
+<% provide :title, t(".post_stories") %>
+<h1><%= t ".post_stories" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @story do |t| %>
+      <%= render "shared/error_messages_story" %>
+      <%= t.label :name %>
+      <%= t.text_field :name, class: "form-control" %>
+      <%= t.label :image %>
+      <%= t.text_field :image, class: "form-control" %>
+      <%= t.label :describe %>
+      <%= t.text_field :describe, class: "form-control" %>
+      <%= t.label :author_id %>
+      <%= t.text_field :author_id, class: "form-control" %>
+      <%= t.label :member_id %>
+      <%= t.text_field :member_id, class: "form-control" %>
+      <%= t.submit t(".post_stories"), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

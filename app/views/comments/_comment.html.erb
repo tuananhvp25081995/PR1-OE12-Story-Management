@@ -1,0 +1,12 @@
+<div>
+  <%= link_to comment.member_name, comment.member %>
+  <br>
+  <%= comment.content %>
+  <% if current_member?(comment.member) %>
+    <%= link_to t(".edit"), edit_comment_path(comment), remote: true %>
+    <%= link_to t(".delete"), comment, method: :delete, data: {confirm: t(".you_sure")} %>
+  <% end %>
+  <br>
+  <%= t ".comment" %> <%= time_ago_in_words(comment.created_at) %> <%= t ".ago" %> 
+  <div id="comment-<%= comment.id %>"></div>
+</div>

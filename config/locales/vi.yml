@@ -1,0 +1,50 @@
+vi:
+  layouts:
+    header:
+      web: "Web Truyện Online"
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      login: "Đăng nhập"
+    footer:
+      about: "About"
+      contact: "Liên Hệ"
+  static_pages:
+    home:
+      truyencuoi: "Truyện Cười"
+      truyenteen: "Truyện Teen"
+      truyenngungon: "Truyện Ngụ Ngôn"
+      truyenngan: "Truyện Ngắn"
+      truyenngontinh: "Truyện Ngôn Tình"
+      search: "Tìm Kiếm..."
+      english: "Tiếng Anh"
+      vietnam: "Tiếng Việt"
+      truyenlove: "Những truyện được yêu thích nhất"
+      truyennew: "Những bài viết mới"
+    help:
+      please: "Vui lòng truy cập:"
+      help: "Để được trợ giúp"
+      help1: "Trợ giúp"
+    contact:
+      web: "Web site được sưu tầm và được cập nhât liên tục trên mạng"
+      contact: "Mọi đóng góp xin được liên hệ:"
+      email: "Email:tuananh@gmail.com"
+      contact1: "Liên Hệ"
+    about:
+      about: "Giới thiệu"
+      web: "Website được thực hiện bởi 2 thành viên là : Nguyễn Tuấn Anh và Phạm Tùng Lâm"
+    list_truyen:
+      logo: "Logo truyện"
+  story:
+    new:
+      story: "Stories"
+    show:
+      notfound: "không tìm thấy"
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+      sign_up: "Đăng kí"
+  members:
+    new:
+      create_account: "Tạo tài khoản"
+    index:
+      all_members: "Tất cả các thành viên"

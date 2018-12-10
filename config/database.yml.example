@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: rootpasswordgiven
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: story_db
+
+test:
+  <<: *default
+  database: test_story_db
+
+production:
+  <<: *default
+  database: production_story_db

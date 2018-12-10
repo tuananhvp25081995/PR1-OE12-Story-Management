@@ -1,0 +1,16 @@
+<% collection.each do |story| %>
+  <div>
+    <%= link_to image_tag( story.image, alt: t(".logo")), story_path(story) %>
+    <% if logged_in? %>
+      <%= link_to like_unlike_path(id: story),
+      id: "like-#{story.id}", class: "btn btn-primary", remote: true do %>
+        <span><%= story.follows.size %></span>
+        <% if has_like story.id, current_member.id %>
+          <i class="fa fa-thumbs-down"></i>
+        <% else %>
+          <i class="fa fa-thumbs-up"></i>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
