@@ -1,10 +1,14 @@
 <div class="row" id="chapter-<%= chapter.id %>">
   <div>
-    <%= link_to chapter.name, chapter %>
+    <div class="col-md-10 chapter">
+      <%= link_to chapter.name, chapter %>
+    </div>
     <% if current_member.admin? %>
-      <%= link_to chapter, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
-        <span class="glyphicon glyphicon-trash"></span>
-      <% end %>
+      <div class="col-md-1 chapter">
+        <%= link_to chapter, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
+          <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

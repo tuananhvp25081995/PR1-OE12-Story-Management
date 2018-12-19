@@ -1,0 +1,6 @@
+<% provide :title, t(".all_author") %>
+<h1><%= t ".all_author" %></h1>
+<ul class="members">
+  <%= render @authors %>
+</ul>
+<%= paginate @authors %>

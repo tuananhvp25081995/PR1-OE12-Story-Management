@@ -283,22 +283,21 @@ input {
 }
 
 .image_story{
-  width: 500px;
+  width: 456px;
   height: 300px;
   float: left;
 }
 
 .describe_story{
-  margin-left: 50px;
-  width: 500px;
+  width: 684px;
   height: 300px;
   float: left;
+  padding: 10px;
 }
 
 .read_chapter{
   width: 500px;
   height: 300px;
-  float: left;
 }
 .comment{
   margin-left: 50px;
@@ -349,4 +348,20 @@ input {
 
 .label-chapter {
   display: inline-block;
+}
+
+.red {
+  color: $red;
+}
+
+.condition {
+  margin-top: 10px;
+  color: $red;
+  text-align: center;
+}
+
+.chapter {
+  margin-left: 10px;
+  border-bottom: 1px solid $white-gray-b;
+  padding: 10px;
 }

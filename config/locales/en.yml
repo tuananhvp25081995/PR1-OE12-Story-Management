@@ -48,6 +48,10 @@ en:
     new:
       story: "Stories"
       post_stories: "Post Stories"
+      name: "Name"
+      describe: "Describe"
+      author: "Author"
+      blank: ": can't be blank"
     show:
       notfound: "Not found"
       chapter_new: "Chapter new"
@@ -134,3 +138,25 @@ en:
       success: "Comment deleted"
       failed: "Delete failed"
       notfound: "Not found"
+  authors:
+    new:
+      new_author: "New author"
+      add_author: "Add author"
+      name: "Name"
+      blank: ": can't be blank"
+    author:
+      you_sure: "You sure"
+    index:
+      all_author: "All author"
+    show:
+      author: "Author: "
+    create:
+      add: "You have successfully added the author"
+      failed: "create failed"
+    destroy:
+      success: "Author deleted"
+      failed: "Delete failed"
+      notfound: "Not found"
+    error:
+      error: "error"
+      the_form: "The form"

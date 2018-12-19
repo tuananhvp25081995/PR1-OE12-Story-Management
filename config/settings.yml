@@ -15,6 +15,9 @@ links:
   avatar_email: "http://gravatar.com/emails"
 paginate:
   per_page: 7
+Author:
+  name:
+    maximum: 40
 Story:
   name:
     maximum: 40
@@ -23,7 +26,7 @@ Story:
 Comment:
   content: 140
 upload:
-  width: 500
+  width: 456
   height: 300
 Chapter:
   content:

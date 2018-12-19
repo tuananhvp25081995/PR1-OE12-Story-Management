@@ -1,0 +1,13 @@
+<% provide :title, t(".new_author") %>
+<h1><%= t ".new_author" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @author do |t| %>
+      <%= render "error" %>
+      <b><%= t ".name" %></b><span class="red">*</span>
+      <%= t.text_field :name, class: "form-control" %>
+      <%= t.submit t(".add_author"), class: "btn btn-primary" %>
+    <% end %>
+    <div class="condition"><b>* <%= t ".blank"%></b></div>
+  </div>
+</div>

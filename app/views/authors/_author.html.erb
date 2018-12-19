@@ -1,0 +1,8 @@
+<li>
+  <%= link_to author.name, author %>
+  <% if current_member.admin? %>
+    <%= link_to author, method: :delete, data: {confirm: t(".you_sure")} do %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  <% end %>
+</li>

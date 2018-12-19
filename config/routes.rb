@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     post "/post", to: "stories#create"
     get "/load_story", to: "story#selectstory", as: "load_story"
     resources :stories
-    resources :story
     resources :comments
+    resources :authors
     resources :chapters
     resources :relationships, only: [:create, :destroy]
     resources :members do
