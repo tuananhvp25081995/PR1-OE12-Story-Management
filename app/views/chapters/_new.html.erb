@@ -3,7 +3,7 @@
   <%= f.text_field :name, class: "form-control" %>
   <%= f.label :content, class: "label-chapter" %>
   <div class="field">
-    <%= f.text_area :content, placeholder: t(".content") %>
+    <%= f.cktext_area :content, placeholder: t(".content") %>
   </div>
   <%= f.hidden_field :story_id, value: story_id %>
   <%= f.submit t(".post"), class: "btn btn-primary" %>

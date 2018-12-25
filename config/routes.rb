@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => "/ckeditor"
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
     get "/help", to: "static_pages#help"

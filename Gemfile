@@ -23,6 +23,7 @@ gem "rails", "~> 5.2.1"
 gem "rails-i18n"
 gem "rails-ujs", "~> 0.1.0"
 gem "turbolinks", "~> 5"
+gem "ckeditor"
 
 group :production do
   gem "pg", "~> 0.20.0"
