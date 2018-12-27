@@ -8,16 +8,18 @@
         <%= link_to comment.member_name, comment.member, class: "name-member" %>
         <%= t ".comment" %> <%= time_ago_in_words(comment.created_at) %> <%= t ".ago" %>
       </div>
-      <div class="col-md-1">
-        <% if current_member.admin? || current_member?(comment.member) %>
-          <%= link_to edit_comment_path(comment), remote: true do %>
-            <span class="glyphicon glyphicon-pencil"></span>
+      <% if logged_in? %>
+        <div class="col-md-1">
+          <% if current_member.admin? || current_member?(comment.member) %>
+            <%= link_to edit_comment_path(comment), remote: true do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+            <%= link_to comment, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
+              <span class="glyphicon glyphicon-trash"></span>
+            <% end %>
           <% end %>
-          <%= link_to comment, method: :delete, data: {confirm: t(".you_sure")}, remote: true do %>
-            <span class="glyphicon glyphicon-trash"></span>
-          <% end %>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div> 
     <div class="content-comment">
       <%= comment.content.html_safe %>

@@ -1,8 +1,12 @@
 <li>
-  <%= link_to author.name, author %>
-  <% if current_member.admin? %>
-    <%= link_to author, method: :delete, data: {confirm: t(".you_sure")} do %>
-      <span class="glyphicon glyphicon-trash"></span>
+  <div class="col-md-11">
+    <%= link_to author.name, author %>
+  </div>
+  <div class="col-md-1">
+    <% if current_member.admin? %>
+      <%= link_to author, method: :delete, data: {confirm: t(".you_sure")} do %>
+        <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </li>

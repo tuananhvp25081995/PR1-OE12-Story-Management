@@ -18,13 +18,16 @@
     <%= render @chapters %>
   </div>
   <%= paginate @chapters %>
-  <div class="new_chapter">
-    <% if current_member.admin? %>
-      <b><%= t ".post" %></b>
-      <%= link_to t(".new_chapter"), new_chapter_path(story_id: @story.id), id: "btn-new-chapter", remote: true %>
-      <div id="chapter-new"></div>
-    <% end %>
-  </div>
+  <% if logged_in? %>
+    <div class="new_chapter">
+      <% if current_member.admin? %>
+        <b><%= t ".post" %></b>
+        <%= link_to t(".new_chapter"), new_chapter_path(story_id: @story.id),
+          id: "btn-new-chapter", remote: true %>
+        <div id="chapter-new"></div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 <div class="row">
   <b><%= @comments.size %> <%= t ".comment" %></b>
