@@ -13,20 +13,26 @@ en:
       account: "Account"
       post: "Post Story"
       story: "Stories"
-    footer:
-      about: "About"
-      contact: "Contact"
-  static_pages:
-    home:
+      search: "Search..."
       truyencuoi: "Truyện Cười"
       truyenteen: "Truyện Teen"
       truyenngungon: "Truyện Ngụ Ngôn"
       truyenngan: "Truyện Ngắn"
       truyenngontinh: "Truyện Ngôn Tình"
-      search: "Search..."
       truyenlove: "Những truyện được yêu thích nhất"
       truyennew: "Những bài viết mới"
+    footer:
+      about: "About"
+      contact: "Contact"
+  static_pages:
+    home:
       home: "Home"
+      truyencuoi: "Truyện Cười"
+      truyenteen: "Truyện Teen"
+      truyenngungon: "Truyện Ngụ Ngôn"
+      truyenngan: "Truyện Ngắn"
+      truyenngontinh: "Truyện Ngôn Tình"
+      truyenlove: "Những truyện được yêu thích nhất"
     help:
       please: "Please access:"
       help: "for help"
@@ -72,7 +78,7 @@ en:
       failed: "Delete failed"
     update:
       story_update: "Story updated"
-  members:    
+  members:
     show:
       story: "story"
       nickname: "name author. With"
@@ -180,3 +186,8 @@ en:
       blank: ": can't be blank"
     update:
       author_update: "The author has been updated"
+
+admin:
+  members:
+    edit:
+      save_changes: "Change"

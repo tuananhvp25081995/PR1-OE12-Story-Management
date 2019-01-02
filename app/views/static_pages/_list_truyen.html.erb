@@ -1,17 +1,49 @@
 <% collection.each do |story| %>
-  <div>
-    <%= link_to (image_tag story.image.url if story.image?), story %>
-    <%= link_to story.name, story %>
-    <% if logged_in? %>
-      <%= link_to like_unlike_path(id: story),
-      id: "like-#{story.id}", class: "btn btn-primary", remote: true do %>
-        <span><%= story.follows.size %></span>
-        <% if has_like story.id, current_member.id %>
-          <i class="fa fa-thumbs-down"></i>
-        <% else %>
-          <i class="fa fa-thumbs-up"></i>
-        <% end %>
+             <div class="col-lg-6 col-md-6">
+               <aside>
+                <%= image_tag story.image.url, class: "img-responsive" %>
+                <div class="content-title">
+                  <div class="text-center">
+                    <h3>
+                      <%= link_to story.namestory, story_path(story), method: :GET %>
+                    </h3>
+                  </div>
+                </div>
+                <div class="content-footer">
+                  <%= gravatar_for story.author.member, class: "user-small-img" %>
+                  <span style="font-size: 16px;color: #fff;">
+                    <%= story.author.name %>
+                  </span>
+                  <span class="pull-right">
+                  <% if logged_in? %>
+                  <%= link_to "Comments", story_path(story), data: {toggle: "tooltip", placeholder: "left"},
+                    class: "fa fa-comments" %>
+                    <%= link_to like_unlike_path(id: story),
+                    id: "like-#{story.id}", data: {toggle: "tooltip", placeholder: "right"}, remote: true do %>
+                      <% if has_like story.id, current_member.id %>
+                        <i class="fa fa-thumbs-down"></i>
+                      <% else %>
+                        <i class="fa fa-thumbs-up"></i>
+                      <% end %>
+                      <span><%= story.follows.size %></span>
+                    <% end %>
+                  <% end %>
+                  </span>
+                    <div class="user-ditels">
+                      <div class="user-img">
+                        <%= gravatar_for story.author.member, class: "img-responsive" %></div>
+                        <span class="user-full-ditels">
+                          <h3><%= story.author.name %></h3>
+                      </span>
+                        <div class="social-icon">
+                          <a href="https://www.facebook.com/tuananhdeptrai.95"><i class="fa fa-facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook"></i></a>
+                          <a href="#"><i class="fa fa-twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter"></i></a>
+                          <a href="https://www.google.com.vn/?hl=vi"><i class="fa fa-google-plus" data-toggle="tooltip" data-placement="bottom" title="Google Plus"></i></a>
+                          <a href="https://www.youtube.com/channel/UCH8KMy7vQ8n27-4cXuQ0evg?view_as=subscriber"><i class="fa fa-youtube" data-toggle="tooltip" data-placement="bottom" title="Youtube"></i></a>
+                          <a href="https://github.com/tuananhvp25081995"><i class="fa fa-github" data-toggle="tooltip" data-placement="bottom" title="Github"></i></a>
+                  </div>
+              </div>
+            </div>
+          </aside>
+        </div>
       <% end %>
-    <% end %>
-  </div>
-<% end %>

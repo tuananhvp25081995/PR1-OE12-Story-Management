@@ -3,6 +3,8 @@
     <%= render "shared/error_messages_story" %>
     <b><%= t ".name" %></b><span class="red">*</span>
     <%= t.text_field :name, class: "form-control" %>
+    <b>Name Story</b><span class="red">*</span>
+    <%= t.text_field :namestory, class: "form-control" %>
     <%= t.label :image %>
     <span class="picture">
       <%= t.file_field :image, accept: "image/jpeg,image/gif,image/png" %>

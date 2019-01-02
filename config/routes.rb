@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get "/", to: "members#index"
+    resources :members
+    resources :stories
+  end
   mount Ckeditor::Engine => "/ckeditor"
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"

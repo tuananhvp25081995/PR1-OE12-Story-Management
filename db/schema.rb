@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2018_12_24_112108) do
   end
 
   create_table "stories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "namestory"
     t.string "name"
     t.text "describe"
     t.string "image"

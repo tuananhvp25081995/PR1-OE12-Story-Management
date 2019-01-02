@@ -1,0 +1,6 @@
+<% collection.each do |story|%>
+  <%= image_tag story.image.url, class: "img-responsive" %>
+  <hr>
+  <%= link_to story.namestory, story_path(story), method: :GET %>
+  <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> <%= story.created_at %></small></p>
+<% end %>

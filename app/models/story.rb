@@ -27,6 +27,6 @@ class Story < ApplicationRecord
   end
 
   def self.search_by search_term
-    where("LOWER(name) LIKE :search_term", search_term: "%#{search_term.downcase}%")
+    where("LOWER(name) LIKE :search_term OR LOWER(namestory) LIKE :search_term", search_term: "%#{search_term.downcase}%")
   end
 end

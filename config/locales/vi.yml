@@ -5,21 +5,26 @@ vi:
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
-    footer:
-      about: "About"
-      contact: "Liên Hệ"
-  static_pages:
-    home:
+      search: "Tìm Kiếm..."
       truyencuoi: "Truyện Cười"
       truyenteen: "Truyện Teen"
       truyenngungon: "Truyện Ngụ Ngôn"
       truyenngan: "Truyện Ngắn"
       truyenngontinh: "Truyện Ngôn Tình"
-      search: "Tìm Kiếm..."
+    footer:
+      about: "About"
+      contact: "Liên Hệ"
+  static_pages:
+    home:
       english: "Tiếng Anh"
       vietnam: "Tiếng Việt"
       truyenlove: "Những truyện được yêu thích nhất"
       truyennew: "Những bài viết mới"
+      truyencuoi: "Truyện Cười"
+      truyenteen: "Truyện Teen"
+      truyenngungon: "Truyện Ngụ Ngôn"
+      truyenngan: "Truyện Ngắn"
+      truyenngontinh: "Truyện Ngôn Tình"
     help:
       please: "Vui lòng truy cập:"
       help: "Để được trợ giúp"

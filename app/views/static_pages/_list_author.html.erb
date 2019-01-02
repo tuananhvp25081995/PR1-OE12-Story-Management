@@ -1,0 +1,13 @@
+<% collection.each do |story|%>
+<button class="accordion"><%= story.author.name %></button>
+  <div class="panel">
+    <li class="recent-post">
+      <div class="post-img">
+        <%= gravatar_for story.author.member, class: "user-small-img" %>
+      </div>
+        <a href="#"><h5><%= story.author.name %></h5></a>
+        <p><small><i class="fa fa-calendar" data-original-title="" title=""></i> <%= story.created_at %></small></p>
+    </li>
+      <p>Hello my name is Anh</p>
+  </div>
+<% end %>

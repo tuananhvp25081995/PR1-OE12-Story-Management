@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  
+
   before_action :set_locale
 
   private
@@ -15,8 +15,11 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in_member
-    return if logged_in?
-    flash[:danger] = t ".please_login"
-    redirect_to login_url
+    unless logged_in?
+      flash[:danger] = t ".please_login"
+      redirect_to login_url
+    end
+    return unless current_member.admin?
+    redirect_to admin_url
   end
 end
