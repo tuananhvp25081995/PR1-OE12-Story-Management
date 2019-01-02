@@ -3,13 +3,9 @@
     <%= link_to t(".web"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".story"), stories_path %></li>
         <li><%= link_to t(".home"), root_path %></li>
         <li><%= link_to t(".help"), help_path %></li>
         <% if logged_in? %>
-          <% if current_member.admin? %>
-            <li><%= link_to t(".post"), post_path %></li>
-          <% end %>
           <li><%= link_to t(".members"), members_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -20,8 +16,10 @@
               <li><%= link_to t(".settings"), edit_member_path(current_member) %></li>
               <% if current_member.admin? %>
                 <li><%= link_to t(".new_author"), new_author_path %></li>
+                <li><%= link_to t(".post"), post_path %></li>
               <% end %>
               <li><%= link_to t(".author"), authors_path %></li>
+              <li><%= link_to t(".story"), stories_path %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to t(".log_out"), logout_path, method: :delete %>

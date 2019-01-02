@@ -8,7 +8,10 @@ class MembersController < ApplicationController
       per Settings.paginate.per_page
   end
 
-  def show; end
+  def show
+    @authors = @member.authors.order_by(:asc).page(params[:page]).
+      per Settings.paginate.per_page
+  end
 
   def new
     @member = Member.new

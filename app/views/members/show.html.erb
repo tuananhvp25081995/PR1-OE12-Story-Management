@@ -8,4 +8,10 @@
       </h1>
     </section>
   </aside>
+  <%= t ".currently_use" %> <%= @member.authors.size %>
+  <%= t ".nickname" %> <%= @member.stories.size %> <%= t ".story" %>
 </div>
+<%= t ".with_nickname" %>
+<hr>
+<%= render @authors %>
+<%= paginate @authors %>

@@ -1,8 +1,11 @@
 class AuthorsController < ApplicationController
-  before_action :load_author, only: %i(show destroy)
+  before_action :load_author, except: %i(new create index)
   before_action :logged_in_member, :admin_member, only: %i(create destroy)
 
-  def show; end
+  def show
+    @stories = @author.stories.order_by(:asc).page(params[:page]).
+      per Settings.paginate.per_page
+  end
 
   def new
     @author = Author.new
@@ -23,6 +26,17 @@ class AuthorsController < ApplicationController
       render :new
     end
   end
+
+  def update
+    if @author.update author_params
+      flash[:success] = t ".author_update"
+      redirect_to authors_path
+    else
+      render :edit
+    end
+  end
+
+  def edit; end
 
   def destroy
     if @author.destroy

@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :load_story, only: %i(show destroy)
+  before_action :load_story, except: %i(index new create)
   before_action :logged_in_member, :admin_member, only: %i(create destroy)
 
   def show
@@ -27,6 +27,17 @@ class StoriesController < ApplicationController
       render :new
     end
   end
+
+  def update
+    if @story.update story_params
+      flash[:success] = t ".story_update"
+      redirect_to @story
+    else
+      render :edit
+    end
+  end
+
+  def edit; end
 
   def destroy
     if @story.destroy

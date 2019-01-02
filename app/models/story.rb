@@ -12,9 +12,9 @@ class Story < ApplicationRecord
   mount_uploader :image, ImageUploader
   validates :describe, presence: true, length: {minimum: Settings.Story.describe.minimum}
   scope :filter, -> (type){where name: type}
+  scope :order_by, ->(direction){order created_at: direction}
 
   delegate :name, to: :author, prefix: true
-
 
   def follow_unfolow member_id
     result = Follow.find_by(story_id: id, member_id: member_id)

@@ -40,6 +40,11 @@ en:
       email: "Email:tuananh@gmail.com"
       contact1: "Contact"
   stories:
+    form:
+      blank: ": can't be blank"
+    edit:
+      update_story: "Update story"
+      save_changes: "Save changes"
     story:
       delete: "delete"
       you_sure: "You sure?"
@@ -51,7 +56,6 @@ en:
       name: "Name"
       describe: "Describe"
       author: "Author"
-      blank: ": can't be blank"
     show:
       notfound: "Not found"
       chapter_new: "Chapter new"
@@ -66,7 +70,14 @@ en:
     destroy:
       success: "Comment deleted"
       failed: "Delete failed"
-  members:
+    update:
+      story_update: "Story updated"
+  members:    
+    show:
+      story: "story"
+      nickname: "name author. With"
+      currently_use: "You currently use:"
+      with_nickname: "With name authors:"
     new:
       create_account: "Create my account"
       signup: "Sign up"
@@ -150,6 +161,8 @@ en:
       all_author: "All author"
     show:
       author: "Author: "
+      with: "with"
+      story: "storys:"
     create:
       add: "You have successfully added the author"
       failed: "create failed"
@@ -160,3 +173,10 @@ en:
     error:
       error: "error"
       the_form: "The form"
+    edit:
+      new_author: "New author"
+      name: "name"
+      add_author: "Save change"
+      blank: ": can't be blank"
+    update:
+      author_update: "The author has been updated"

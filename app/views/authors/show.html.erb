@@ -1,4 +1,8 @@
 <% provide :title, @author.name %>
 <div class="row">
-  <%= t ".author" %><%= @author.name %>
+  <%= t ".author" %><%= @author.name %>.
+  <%= t ".with" %> <%= @author.stories.size %> <%= t ".story" %>
+  <hr>
+  <%= render @stories %>
 </div>
+<%= paginate @stories %>

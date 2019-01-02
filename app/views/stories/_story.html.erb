@@ -1,8 +1,13 @@
-<li>
+<div class="col-md-11">
   <%= link_to story.name, story %>
+</div>
+<div class="col-md-1">
   <% if current_member.admin? && current_member?(story.member) %>
+    <%= link_to edit_story_path(story) do %>
+      <span class="glyphicon glyphicon-pencil"></span>
+    <% end %>
     <%= link_to story, method: :delete, data: {confirm: t(".you_sure")} do %>
       <span class="glyphicon glyphicon-trash"></span>
     <% end %>
   <% end %>
-</li>
+</div>
